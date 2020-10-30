@@ -90,6 +90,10 @@ chrome.commands.onCommand.addListener((command, tab) => {
   }
 });
 
+chrome.pageAction.onClicked.addListener((tab) => {
+  gotoJiraFromTab(tab);
+});
+
 chrome.runtime.onInstalled.addListener(function() {
   chrome.storage.sync.set({
     // TODO: Use some more 
@@ -98,10 +102,6 @@ chrome.runtime.onInstalled.addListener(function() {
     githubOwners: '',
   }, () => {
     console.log("Default settings has been stored");
-  });
-
-  chrome.pageAction.onClicked.addListener((tab) => {
-    gotoJiraFromTab(tab);
   });
 
   updateDeclarativeRules(() => {
