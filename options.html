@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    </head>
+    <body>
+      <div class="container mt-3">
+        <div class="form-group">
+          <label for="baseUrl">JIRA Base-URL</label>
+          <input type="url" class="form-control" id="baseUrl" aria-describedby="baseUrlHelp" placeholder="https://jira.my-company.com">
+          <small id="baseUrlHelp" class="form-text text-muted">The base URL (just "https://hostname") of the Jira deployment you want to search in</small>
+        </div>
+        <div class="form-group">
+          <label for="baseUrl">JIRA Search Query</label>
+          <input type="text" class="form-control" id="jql" aria-describedby="jqlHelp" placeholder='"GitHub#" ~ "{issueNumber}"'>
+          <small id="jqlHelp" class="form-text text-muted">The Jira query that you want to search with (use <code>{issueNumber}</code> for the GitHub issue number)</small>
+        </div>
+        <div class="form-group">
+          <label for="githubOwners">GitHub owners</label>
+          <input type="text" class="form-control" id="githubOwners" aria-describedby="githubOwnersHelp" placeholder="my-user, my-company">
+          <small id="githubOwnersHelp" class="form-text text-muted">Comma-seperated list of organizations or users to inject the Jira button into</small>
+        </div>
+      </div>
+      <script src="options.js"></script>
+    </body>
+  </html>
