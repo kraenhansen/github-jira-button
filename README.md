@@ -5,7 +5,7 @@
 1. Clone the GitHub repository: `git clone git@github.com:kraenhansen/github-jira-button.git`
 2. Go to the "Extensions" settings in your Chrome browser, by navigating to [chrome://extensions/](chrome://extensions/)
 3. Toggle on "Developer mode" in the upper right side.
-4. Click "Load onpacked" and select the repository.
+4. Click "Load unpacked" and select the repository.
 
 ## Using this magnificent extension
 
